@@ -17,3 +17,15 @@ console.log(result,fullName);
 
 let index=email.indexOf('@');
 console.log(index);
+
+let res=email.lastIndexOf('d');
+console.log(res);
+
+let res2=email.slice(0,10);
+console.log(res2);
+
+let res3=email.substr(4,10);
+console.log(res3);
+
+let res4=email.replace('h','b');
+console.log(res4);
