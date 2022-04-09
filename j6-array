@@ -1,0 +1,28 @@
+let a=['ss','gg','ll'];
+console.log(a);
+a[1]='kk';
+console.log(a[1]);
+
+let ages=[20,25,30,35];
+console.log(ages[2]);
+
+let random=['kk','crystal',30,20];
+console.log(random);
+
+console.log(a.length);
+
+//array methods
+let rr=a.join(',');
+console.log(rr);
+
+let rr1=a.indexOf('ll');
+console.log(rr1);
+
+let rr2=a.concat(['op','lp']);
+console.log(rr2);
+
+let rr3=a.push('oxy');//destructive method(it alters value)
+console.log(rr3);
+
+let rr4=a.pop('oxy');
+console.log(rr4);
