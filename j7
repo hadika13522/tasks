@@ -1,0 +1,65 @@
+//null & undefined
+let ab;
+console.log(ab,ab+3,`the age is ${ab}`);
+
+let bb=null;
+console.log(bb,bb+3,`the age is ${bb}`);
+
+//booleans & comparisons
+console.log(true,false,'true','false');
+//methods can return boolens
+let e='hadika15-13522@diu.edu.bd';
+let names=['opera','choc','loop'];
+let ep=email.includes('@');
+let or=names.includes('loop');
+console.log(ep);
+console.log(or);
+
+//comparison operators
+let l=25;
+console.log(l==25);//loose comparison
+console.log(l==30);
+console.log(l!=30);
+console.log(l>20);
+console.log(l<20);
+console.log(l<=25);
+console.log(l>=25);
+
+let nm='shaun';
+console.log(nm=='shaun');
+console.log(nm=='Shaun');
+console.log(nm>'crystal');
+console.log(nm>'Shaun');//lowercase>uppercase
+console.log(nm>'Crystal');
+
+console.log(l=='25');//different types can still be equal
+console.log(l!='25');
+console.log(l===25);//strict comparison
+console.log(l==='25');
+console.log(l!==25);
+console.log(l!=='25');
+
+//type conversion
+let s='100';
+console.log(s+1);//1001
+s=Number(s);
+console.log(s+1);//101
+console.log(typeof s);
+
+let ok=Number('hello');
+console.log(ok);//NaN
+
+let ok1=String(50);
+console.log(ok1,typeof ok1);
+
+let ok2=Boolean(100);//pos and neg -true
+console.log(ok2,typeof ok2);
+
+let ok3=Boolean(0);//0-false
+console.log(ok3,typeof ok3);
+
+let ok4=Boolean('0');
+console.log(ok4,typeof ok4);
+
+let ok5=Boolean('');
+console.log(ok5,typeof ok5);
