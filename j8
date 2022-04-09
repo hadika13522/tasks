@@ -1,0 +1,142 @@
+//for loops
+for(let i=0; i<5; i++){
+    console.log('in loop',i);
+}
+console.log('loop finished');
+
+const np =['sh','ma','lu'];
+for(let ii=0; ii<np.length; ii++){
+    console.log(np[ii]);
+    let hhtml=`<div>${np[ii]}</div>`;
+    console.log(hhtml);
+}
+
+//while loops
+let i=0;
+while(i<5){
+    console.log('in loop',i);
+    i++;
+}
+const p =['sh','ma','lu'];
+let g=0;
+while(g<p.length){
+    console.log(p[g]);
+    g++;
+}
+
+//do while
+let h=5;
+do{
+    console.log('val of h is:',h);
+    h++;
+}while(h<5);
+
+//if statements
+const v=25;
+if(v>20){
+    console.log('u are over 20 years old');
+}
+
+const ni=['mk','lo','gi','fi'];
+if(ni.length>3){
+    console.log("that's a lot of names");
+}
+
+const pass='p1o446m0nnb8';
+if(pass.length>=12){
+    console.log('it is mighty strong');
+}
+else if(pass.length>=8){
+    console.log('it is long enough');
+}
+else{
+    console.log('pass is not long enough');
+}
+
+//logical operators
+if(pass.length>=12 && pass.includes('p')){
+    console.log('it is mighty strong');
+}
+else if(pass.length>=8 || pass.includes('p') && pass.length>5){
+    console.log('it is strong enough');
+}
+else{
+    console.log('pass is not strong enough');
+}
+
+//logical not
+let user=false;
+if(!user){
+    console.log('u must be logged in to continue');
+}
+console.log(!true);
+console.log(!false);
+
+//break & continue
+const sp=[50,25,0,30,100,20,10];
+for(let o=0;o<sp.length;o++){
+    if(sp[o]===0){
+        continue;
+    }
+    console.log('your score: ',sp[o]);
+    if(sp[o]===100){
+        console.log('top score');
+        break;
+    }
+}
+
+//switch
+const mark='50';
+switch(mark){
+    case '50':
+        console.log('A');
+        break;
+    case 'B':
+        console.log('B');
+        break;
+    case 'C':
+        console.log('C');
+        break;
+    case 'D':
+        console.log('D');
+        break;
+    case 'E':
+        console.log('E');
+        break;
+    default:
+        console.log('invalid');
+}
+
+//variables & block scopes
+let io=30;
+if(true){
+   io=40;
+   console.log('inside',io);//40
+}
+console.log('outside',io);//40
+
+if(true){
+    let io=40;
+    let no='sh';
+    console.log('inside',io,no);//40 sh
+    if(true){
+       // console.log('inside 2nd:',io);//take immidiate value
+        let io=50;
+        console.log('inside 2nd:',io);
+    }
+ }
+ console.log('outside',io);//30
+
+ const il=30;
+ if(true){
+    const il=40;
+    const nop='sh';
+    console.log('inside',il,nop);
+    if(true){
+       // console.log('inside 2nd:',il);
+        const il=50;
+        console.log('inside 2nd:',il);
+        var test='j';
+    }
+ }
+ console.log('outside',il,test);//30
