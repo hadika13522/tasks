@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <h1 id="page-title">Hadika Hasan</h1>
+    <a href="https://www.hadikhasan.com">Link to somewhere cool...</a>
+        <p class="error">HI</p>
+    
+    <!-- <script>
+        alert('hello, world!');
+    </script> -->
+  <script src="sandbox.js"></script>
+</body>
+</html>
+
+const link=document.querySelector('a');
+console.log(link.getAttribute('href'));
+link.setAttribute('href','https://www.hadika912.com');
+link.innerText="Hadika Hasan's Website";
+const msg=document.querySelector('p');
+console.log(msg.getAttribute('class'));
+msg.setAttribute('class','sucess');
+msg.setAttribute('style','color:green');
