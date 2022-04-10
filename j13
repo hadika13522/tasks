@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <h1 id="page-title">Hadika Hasan</h1>
+    <div>
+        <p>hello,ridhi</p>
+        <p>lorem epsum</p>
+        <p class="error">this is error</p>
+    </div>
+    <div class="error">this is another error</div>
+    <!-- <script>
+        alert('hello, world!');
+    </script> -->
+  <script src="sandbox.js"></script>
+</body>
+</html>
+
+//get element by id
+const title=document.getElementById('page-title');
+console.log(title);
+//get elements by their class name
+const errors1=document.getElementsByClassName('error');
+console.log(errors1);
+// console.log(errors1[0]);
+// errors1.forEach(error=>{//cant use foreach
+//   console.log(error);
+// });
+//get elements by their tag name
+const paras=document.getElementsByTagName('p');
+console.log(paras);
+console.log(paras[1]);
