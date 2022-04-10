@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <h1 style="color:brown;">Hadika Hasan</h1>
+
+    
+    <!-- <script>
+        alert('hello, world!');
+    </script> -->
+  <script src="sandbox.js"></script>
+</body>
+</html>
+
+const title=document.querySelector('h1');
+//title.setAttribute('style','margin:50px');
+console.log(title.style);
+console.log(title.style.color);
+title.style.margin='50px';
+title.style.color='crimson';
+title.style.fontSize='60px';
+title.style.margin='';
