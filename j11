@@ -1,0 +1,117 @@
+//object literals
+/*let user1={
+  name1:'crystal',
+  age:30,
+  email:'hadiks15-135222diu.edu.bd',
+  location:'Dhaka',
+  blogs:['Nothing','No']
+};
+console.log(user1);
+console.log(user1.name1);
+user1.age=35;
+console.log(user1.age);
+console.log(user1['name1']);
+user1['name1']='hola';
+console.log(user1['name1']);
+const key='location';
+console.log(user1[key]);
+console.log(typeof user1);
+
+
+let user1={
+    name1:'crystal',
+    age:30,
+    email:'hadiks15-135222diu.edu.bd',
+    location:'Dhaka',
+    blogs:['Nothing','No'],
+    login:function(){//method is a function but it's defined on an object.regular function doesn't define inside an object
+        console.log('the user logged in');
+    },
+    logout:function(){
+        console.log('the user logged out');
+    },
+    /*logBlogs:function(){
+        console.log(this);
+        console.log(this.blogs);
+        console.log('the blogs are:');
+        this.blogs.forEach(blog=>{
+            console.log(blog);
+        });
+    }
+    logBlogs:()=>{
+        console.log(this);
+    }*/
+    /*logBlogs(){
+        console.log(this);
+        console.log(this.blogs);
+        console.log('the blogs are:');
+        this.blogs.forEach(blog=>{
+            console.log(blog);
+        });
+    }
+  };
+  user1.login();
+  user1.logout();
+  user1.logBlogs();
+  console.log(this);*/
+
+
+// const blogs=[
+//     {title:'Nothing',likes:20},
+//     {title:'No',likes:15}
+// ];
+// console.log(blogs);
+
+let user1={
+    name1:'crystal',
+    age:30,
+    email:'hadiks15-135222diu.edu.bd',
+    location:'Dhaka',
+    blogs:[{title:'Nothing',likes:20},
+           {title:'No',likes:15}
+        ],
+    login(){
+        console.log('the user logged in');
+    },
+    logout(){
+        console.log('the user logged out');
+    },
+    logBlogs(){
+        console.log('the blogs are:');
+        this.blogs.forEach(blog=>{
+            console.log(blog.title,blog.likes);
+        });
+    }
+};
+user1.logBlogs();
+
+//Math objects
+console.log(Math);
+console.log(Math.PI);
+console.log(Math.E);
+
+const area2=7.7;
+console.log(Math.round(area2));
+console.log(Math.floor(area2));
+console.log(Math.ceil(area2));
+console.log(Math.trunc(area2));
+
+//random numbers
+const ran1=Math.random();
+console.log(ran1);//always between 0 & 1
+console.log(Math.round(ran1));//1 or 0
+console.log(Math.round(ran1*100));//between 1 &100
+
+//primitive values
+let scoreOne=50;
+let scoreTwo=scoreOne;
+console.log(`scoreOne:${scoreOne}`,`scoreTwo:${scoreTwo}`);
+scoreOne=100;
+console.log(`scoreOne:${scoreOne}`,`scoreTwo:${scoreTwo}`);
+
+//reference values
+const userOne={name:'jj',age:30}
+const userTwo=userOne;
+console.log(userOne,userTwo);
+userOne.age=40;
+console.log(userOne,userTwo);
