@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Javascript</title>
+</head>
+<body>
+    <h1 class="title">Hadika Hasan</h1>
+    <p>lorem error ipsum</p>
+    <p>lorem success ipsum</p>
+    <p>lorem ipsum lorem</p>
+    <p>lorem error success</p>
+    <p>error lorem ipsum</p>
+    <p>lorem ipsum lorem</p>
+    <p>lorem ipsum error</p>
+    <p>success lorem ipsum</p>
+    <!-- <script>
+        alert('hello, world!');
+    </script> -->
+    <script src="sandbox.js"></script>
+</body>
+</html>
+
+
+.error{
+    padding:10px;
+    color:crimson;
+    border:1px dotted crimson;
+}
+.success{
+    padding:10px;
+    color:lightgreen;
+    border:1px dotted lightgreen
+}
+
+
+const paras=document.querySelectorAll('p');
+paras.forEach(p=>{
+    //console.log(p.innerText);//get al of the visible text inside the elements
+    //console.log(p.textContent);
+    if(p.textContent.includes('error')){
+        p.classList.add('error');
+    }
+    if(p.innerText.includes('success')){
+        p.classList.add('success');
+    }
+})
+
+//toggle class
+const title=document.querySelector('.title');
+title.classList.toggle('test');
+title.classList.toggle('test');//gonna remove class
