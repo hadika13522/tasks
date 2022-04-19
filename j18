@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Javascript</title>
+</head>
+<body>
+    <h1>Hadika Hasan</h1>
+    <p>Something</p>
+    
+    <!-- <script>
+        alert('hello, world!');
+    </script> -->
+    <script src="sandbox.js"></script>
+</body>
+</html>
+
+
+.error{
+    padding:10px;
+    color:crimson;
+    border:1px dotted crimson;
+}
+.success{
+    padding:10px;
+    color:lightgreen;
+    border:1px dotted lightgreen
+}
+
+
+//add classes
+content.classList.add('error');
+//remove classes
+content.classList.remove('error');
+content.classList.add('success');
