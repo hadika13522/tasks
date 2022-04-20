@@ -1,0 +1,16 @@
+// //global object
+// // console.log(global);
+// setTimeout(() => {
+//     console.log('in the timeout');
+//     clearInterval(int);
+// },3000);
+
+// const int=setInterval(()=>{
+//     console.log('in the interval');
+// },1000)
+
+// console.log(__dirname);//gets ansolute path of the current folder that global file is in
+// console.log(__filename);//gets absolute path of the folder with the filename
+
+
+console.log(document.querySelector);
