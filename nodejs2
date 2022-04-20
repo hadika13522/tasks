@@ -13,4 +13,4 @@
 // console.log(__filename);//gets absolute path of the folder with the filename
 
 
-console.log(document.querySelector);
+console.log(document.querySelector);//document is window object that is not available in nodejs
