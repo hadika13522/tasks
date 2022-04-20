@@ -1,0 +1,19 @@
+// const xyz=require('./people');//import file
+// console.log(xyz);//empty object
+// console.log(people);//can only access inside the file
+
+const {people,ages}=require('./people');//import multiple files
+console.log(people,ages);
+
+const os=require('os');
+console.log(os);
+console.log(os.platform(),os.homedir());
+
+
+const people=['yoshi','ryiu','ridz','hono'];
+const ages=[20,25,30,35];
+console.log(people);
+// module.exports=people;//export 
+module.exports={
+    people,ages//(people:people same name so put just people)
+};//export 
