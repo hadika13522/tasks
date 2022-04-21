@@ -45,3 +45,12 @@ if(fs.existsSync('./docs/dltm.txt')){
         console.log('file deleted');
     });
 }
+
+
+
+
+bl1.txt
+hello,world
+
+bl2.txt
+hello,again
