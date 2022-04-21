@@ -1,0 +1,47 @@
+const fs=require('fs');
+
+// //readingfiles
+// fs.readFile('./docs/bl1.txt',(err,data)=>{
+//    if(err){
+//        console.log(err);
+//    }
+//    console.log(data.toString());
+// });
+// console.log('last line');
+
+//writing files
+// fs.writeFile('./docs/bl1.txt','hello,world',()=>{
+//     console.log('file was written');
+// });
+
+// fs.writeFile('./docs/bl2.txt','hello,again',()=>{
+//     console.log('file was written');
+// });
+
+//directories
+if(!fs.existsSync('./assets')){
+  fs.mkdir('./assets',(err)=>{
+    if (err) {
+      console.log(err);
+    }
+    console.log('folder created');
+  });
+} 
+else {
+  fs.rmdir('./assets',(err)=>{
+    if (err) {
+      console.log(err);
+    }
+    console.log('folder deleted');
+  });
+}
+
+//deleting files
+if(fs.existsSync('./docs/dltm.txt')){
+    fs.unlink('./docs/dltm.txt',(err)=>{
+        if(err){
+            console.log(err);
+        }
+        console.log('file deleted');
+    });
+}
