@@ -1,0 +1,167 @@
+const express=require('express');
+const { create } = require('lodash');
+//express app
+const app=express();
+
+//register view engine
+app.set('view engine','ejs');
+
+//listen for requests
+app.listen(3000);
+
+app.get('/',(req,res)=>{
+  //res.send('<p>home page</p>');
+  const blogs=[
+     {title: 'The darkness', snippet:'Something in the way'},
+     {title: 'The Hobbit', snippet:'Nothing to say'},
+     {title: 'How to defeat browser',snippet:'Nothing to say'},
+  ];
+  res.render('index',{title: 'Home', blogs});
+});
+app.get('/about',(req,res)=>{
+    res.render('about',{title: 'About'});
+});
+
+app.get('/blogs/create',(req,res)=>{
+    res.render('create',{title: 'Create a new Blog'});
+});
+
+//404
+app.use((req,res)=>{
+    res.status(404).render('404',{title: '404'});
+});
+
+
+
+
+
+
+
+index-ejs
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadika Hasan | <%= title %></title>
+</head>
+<body>
+    <!-- <% const name='Ridhi' %> -->
+    <nav>
+        <div class="site-title">
+            <!-- <p><%= name %></p> -->
+           <a href="/"><h1>Hadika Hasan</h1></a>
+           <p>A blogging site</p>
+        </div>
+        <ul>
+            <li><a href="/">Blogs</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/blogs/create">New Blog</a></li>
+        </ul>
+    </nav>
+    <div class="blogs content">
+       <h2>All Blogs</h2>
+       <% if(blogs.length > 0){ %>
+            <% blogs.forEach(blog=>{ %>
+                <h3 class="title"><%= blog.title %></h3>
+                <p class="snippet"><%= blog.snippet %></p>
+            <% }) %>
+       <% } else { %>
+                <p>There are no blogs to display...</p>
+       <% } %>
+    </div>
+</body>
+</html>
+
+
+
+
+about-ejs
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadika Hasan | <%= title %></title>
+</head>
+<body>
+    <nav>
+        <div class="site-title">
+           <a href="/"><h1>Hadika Hasan</h1></a>
+           <p>A blogging site</p>
+        </div>
+        <ul>
+            <li><a href="/">Blogs</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/blogs/create">New Blog</a></li>
+        </ul>
+    </nav>
+    <div class="about content">
+       <h2>About us</h2>
+       <p>jdddii,  dnmdkdkkddlododododdo</p>
+       <p>jdddii,  dnmdkdkkddlododododdo</p>
+       <p>jdddii,  dnmdkdkkddlododododdo</p>
+    </div>
+</body>
+</html>
+
+
+
+404-ejs
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadika Hasan | <%= title %></title>
+</head>
+<body>
+    <nav>
+        <div class="site-title">
+           <a href="/"><h1>Hadika Hasan</h1></a>
+           <p>A blogging site</p>
+        </div>
+        <ul>
+            <li><a href="/">Blogs</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/blogs/create">New Blog</a></li>
+        </ul>
+    </nav>
+    <div class="not-found content">
+       Oops, page not found :)
+    </div>
+</body>
+</html>
+
+
+
+
+create-ejs
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadika Hasan | <%= title %></title>
+</head>
+<body>
+    <nav>
+        <div class="site-title">
+           <a href="/"><h1>Hadika Hasan</h1></a>
+           <p>A blogging site</p>
+        </div>
+        <ul>
+            <li><a href="/">Blogs</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/blogs/create">New Blog</a></li>
+        </ul>
+    </nav>
+    <div class="create-blog content">
+       <form>
+           <label for="title">Blog title:</label>
+           <input type="text" id="title" required>
+           <label for="snippet">Blog snippet:</label>
+           <input type="text" id="snippet" required>
+           <label for="body">Blog body:</label>
+           <textarea id="body" required></textarea>
+           <button>Submit</button>
+       </form>
+    </div>
+</body>
+</html>
